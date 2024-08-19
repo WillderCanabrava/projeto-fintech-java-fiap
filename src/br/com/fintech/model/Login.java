@@ -18,7 +18,7 @@ public class Login {
         this.password = password;
     }
 
-    public void showAcessScreen() {
+    public void showAccessScreen() {
         System.out.println("Username: ");
         username = sc.nextLine();
         System.out.println("Senha: ");
@@ -30,8 +30,7 @@ public class Login {
         while(!username.equals("luissouza@fintech.com") && password.equals("Fintech1234!") && count <= 2) {
             System.out.println("Username ou senha inválido! Você tem mais " + (3 - count) + "tentativas.");
             count++;
-            username = sc.nextLine();
-            password = sc.nextLine();
+            showAccessScreen();
         }
         if (username.equals("luissouza@fintech.com") && (password.equals("Fintech1234!"))) {
 
