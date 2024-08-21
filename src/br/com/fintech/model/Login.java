@@ -27,8 +27,8 @@ public class Login {
 
 
     public void accessLogin() {
-        while(!username.equals("luissouza@fintech.com") && password.equals("Fintech1234!") && count <= 2) {
-            System.out.println("Username ou senha inválido! Você tem mais " + (3 - count) + "tentativas.");
+        while(!username.equals("luissouza@fintech.com") && password.equals("Fintech1234!") || (count <= 2)) {
+            System.out.println("Username ou senha inválido! Você tem mais " + (3 - count) + " tentativas.");
             count++;
             showAccessScreen();
         }
@@ -38,5 +38,7 @@ public class Login {
         } else {
             System.out.println("Acesso bloqueado!");
         }
+
+        sc.close();
     }
 }
